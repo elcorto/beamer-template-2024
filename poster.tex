@@ -11,6 +11,13 @@
     ]{biblatex}
 \addbibresource{references.bib}
 
+% Standard TeX math font. See also
+%   https://github.com/elcorto/docwatch/blob/a8ea3d386a0db685cab89dee11879a76cc5e10a0/examples/template.yml#L21-L27
+%%\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage[olddefault]{fontsetup}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+
 \newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
 
 \title{Super Awesome Project Title}
