@@ -306,6 +306,3 @@ TSWLatexianTemp*
 
 # Mac OS
 .DS_Store
-
-# Maybe added by init-theme-submodule.sh
-theme/beamerfontthemeserif.sty
