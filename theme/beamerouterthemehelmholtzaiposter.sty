@@ -49,17 +49,29 @@
 \setbeamertemplate{navigation symbols}{}
 
 
+\newif\ifhgfusenormaltitlefont
+\hgfusenormaltitlefontfalse
+\newcommand{\hgfusenormaltitlefont}{\hgfusenormaltitlefonttrue}
+\newcommand{\pblocktitlefont}{\ifhgfusenormaltitlefont\large\else\hermannboldfont\fi}
+\newcommand{\pblocksquare}{%
+    \ifhgfusenormaltitlefont
+        \rule{1em}{1em}%
+    \else
+        \rule{1.5em}{1.5em}%
+    \fi
+}
+
 \newtcolorbox[auto counter]{pblock}[2][]{%
     colback=white,
     colbacktitle=white,
     coltitle=hgfdarkblue,
-    fonttitle=\hermannboldfont, 
+    fonttitle=\pblocktitlefont,
     title=\enspace #2,
     enhanced,
     frame hidden,
     borderline north={3.0pt}{0pt}{hgfdarkblue},
     before title={
-        \hspace{-0.6em}\color{hgfdarkblue}\rule{1.5em}{1.5em}
+        \hspace{\ifhgfusenormaltitlefont-0.49em\else-0.6em\fi}\color{hgfdarkblue}\pblocksquare
     },
     toptitle=-0.3em,
     top=0.5em,
