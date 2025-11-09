@@ -10,14 +10,14 @@
 
 \defbeamertemplate{background canvas}{poster}{
     \begin{tikzpicture}
-        \draw[draw=none, fill=hgfdarkblue] 
+        \draw[draw=none, fill=hgfdarkblue]
             (current page.north west) --
             ++(3cm, 0) --
             ++(0, \paperheight) --
             ++(-3cm, 0) --
             cycle;
 
-        \draw[draw=none, fill=hgflightblue] 
+        \draw[draw=none, fill=hgflightblue]
             ($ (current page.north west) + (3cm, 0.1\paperheight) $) --
             ++(1.5cm, 0) --
             ++(0, 0.9\paperheight) --
@@ -41,7 +41,7 @@
         \vspace{1.5cm}
         \usebeamercolor[hgflightblue]{framesubtitle}\small\insertauthor\par
         \vspace{0.5cm}
-        \usebeamercolor[hgflightblue]{framesubtitle}\small\insertinstitute\par 
+        \usebeamercolor[hgflightblue]{framesubtitle}\small\insertinstitute\par
     \end{beamercolorbox}
 }
 
