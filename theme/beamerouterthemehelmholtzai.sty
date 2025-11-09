@@ -137,15 +137,15 @@
 %   \newcommand{\nobla}{\blafalse}
 %   \newcommand{\disablebla}{\blafalse}
 %   ...
-\newif\ifhgfusenormalframetitle
-\hgfusenormalframetitlefalse
-\newcommand{\hgfusenormalframetitle}{\hgfusenormalframetitletrue}
+\newif\ifhgfusenormaltitlefont
+\hgfusenormaltitlefontfalse
+\newcommand{\hgfusenormaltitlefont}{\hgfusenormaltitlefonttrue}
 \newlength{\frametitleboxheight}
 \newlength{\hgfframetitlesep}
 \setlength{\hgfframetitlesep}{0em}
 \defbeamertemplate{frametitle}{frame}{%
     \vspace{\hgfframetitlesep}
-    \ifhgfusenormalframetitle
+    \ifhgfusenormaltitlefont
         \ifx\insertframesubtitle\empty%
             \setlength{\frametitleboxheight}{2.1em}
         \else %
