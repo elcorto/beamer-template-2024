@@ -53,6 +53,12 @@
 \hgfusenormaltitlefontfalse
 \newcommand{\hgfusenormaltitlefont}{\hgfusenormaltitlefonttrue}
 \newcommand{\pblocktitlefont}{\ifhgfusenormaltitlefont\large\else\hermannboldfont\fi}
+
+% Adjustable pblock header spacing (default values for A0, scale=1.8). Use
+%   \setlength{\hgfpblockheaderhspace}{XXXem}
+\newlength{\hgfpblockheaderhspace}
+\setlength{\hgfpblockheaderhspace}{\ifhgfusenormaltitlefont-0.49em\else-0.6em\fi}
+
 \newcommand{\pblocksquare}{%
     \ifhgfusenormaltitlefont
         \rule{1em}{1em}%
@@ -71,7 +77,7 @@
     frame hidden,
     borderline north={3.0pt}{0pt}{hgfdarkblue},
     before title={
-        \hspace{\ifhgfusenormaltitlefont-0.49em\else-0.6em\fi}\color{hgfdarkblue}\pblocksquare
+        \hspace{\hgfpblockheaderhspace}\color{hgfdarkblue}\pblocksquare
     },
     toptitle=-0.3em,
     top=0.5em,
