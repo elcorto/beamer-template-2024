@@ -306,3 +306,6 @@ TSWLatexianTemp*
 
 # Mac OS
 .DS_Store
+
+# TeX compile errors
+*-SAVE-ERROR
